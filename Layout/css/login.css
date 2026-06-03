@@ -1,0 +1,519 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================= */
+/* BODY */
+/* ========================================= */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+/* ========================================= */
+/* PHONE CONTAINER */
+/* ========================================= */
+
+.phone-container {
+  position: relative;
+
+  width: 421px;
+  height: 874px;
+
+  overflow: hidden;
+
+  font-family: "Roboto Slab", serif;
+
+  isolation: isolate;
+
+  border-radius: 38px;
+
+  border: 4px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+
+  isolation: isolate;
+}
+
+.phone-container::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -20px;
+
+  background-image: url("../img/bg-start.png");
+  background-size: cover;
+  background-position: center;
+
+  transform: scale(1.1);
+
+  z-index: -2;
+
+  animation: bgMove 18s ease-in-out infinite alternate;
+}
+
+.phone-container::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.6)
+  );
+
+  z-index: -1;
+}
+
+/* ========================================= */
+/* CIRCULO SUPERIOR */
+/* ========================================= */
+
+.top-circle {
+  position: absolute;
+
+  top: 40px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 297px;
+  height: 267px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(0, 200, 255, 0.65);
+
+  overflow: hidden;
+
+  z-index: 3;
+
+  box-shadow:
+    0 0 25px rgba(0, 180, 255, 0.55),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(6px);
+
+  animation: breathing 4s ease-in-out infinite;
+}
+
+.top-radar {
+  position: absolute;
+
+  top: 16px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 253px;
+  height: 231px;
+
+  border-radius: 50%;
+
+  border: 2px solid rgba(0, 200, 255, 0.65);
+
+  overflow: hidden;
+
+  z-index: 3;
+
+  box-shadow:
+    0 0 25px rgba(0, 180, 255, 0.55),
+    inset 0 0 20px rgba(255, 255, 255, 0.08);
+
+  backdrop-filter: blur(6px);
+
+  animation: float 5s ease-in-out infinite;
+}
+
+.top-radar img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0.7;
+
+  animation: creatureMove 7s ease-in-out infinite;
+
+  transition: 1s;
+}
+
+/* ========================================= */
+/* MENU ICON */
+/* ========================================= */
+
+.menu-icon {
+  position: absolute;
+
+  top: 40px;
+  right: 25px;
+
+  z-index: 4;
+
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-icon span {
+  width: 30px;
+  height: 5px;
+
+  border-radius: 10px;
+
+  background: #fff;
+
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+
+/* ========================================= */
+/* TITULO */
+/* ========================================= */
+
+.title {
+  position: absolute;
+
+  top: 230px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 3;
+
+  text-align: center;
+}
+
+.title h1 {
+  font-size: 55px;
+
+  letter-spacing: 2px;
+
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.title .orange {
+  color: #ff9f1c;
+}
+
+.title .white {
+  color: #d9f3ff;
+}
+
+.subtitle {
+  margin-top: -8px;
+
+  font-size: 17px;
+
+  letter-spacing: 6px;
+
+  color: #8ee9ff;
+}
+
+/* ========================================= */
+/* TEXTO SISTEMA */
+/* ========================================= */
+
+.system-line {
+  line-height: 1.2;
+}
+
+.system {
+  font-size: 14px;
+  color: #d8f7ff;
+}
+
+.message {
+  font-size: 29px;
+}
+
+.orange {
+  color: #ff8c1a;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+.white {
+  color: #f1f1f1;
+  font-size: 30px;
+  text-decoration: none;
+
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ========================================= */
+/* MENU BOTONES */
+/* ========================================= */
+
+.group {
+  position: absolute;
+
+  top: 84%;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 6;
+}
+
+.menu-info {
+  position: absolute;
+
+  bottom: 140px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.menu {
+  position: absolute;
+
+  bottom: 0px;
+  left: 50%;
+  background-color: #000;
+  width: 100%;
+  height: 100px;
+  transform: translateX(-50%);
+
+  gap: -40px;
+
+  display: flex;
+  z-index: 5;
+}
+
+/* ========================================= */
+/* BOTONES */
+/* ========================================= */
+
+/* ========================================= */
+/* INPUT GLASS */
+/* ========================================= */
+
+.glass{
+  width: 364px;
+  height: 57px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  text-decoration: none; /* ← ESTO QUITA LA LINEA */
+
+  padding: 0 20px;
+
+  outline: none;
+
+  border-radius: 18px;
+
+  border: 1px solid rgb(0, 180, 216);
+
+  background: transparent;
+
+  color: #f1f1f1;
+
+  font-size: 22px;
+
+  font-family: "Roboto Slab", serif;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 0 12px rgba(0, 0, 0, 0.35),
+    inset 0 0 10px rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s ease;
+
+  animation: glassPulse 3s ease-in-out infinite;
+}
+
+.glass:hover {
+  transform: scale(1.02);
+
+  border: 1px solid #5ce1ff;
+}
+
+/* PLACEHOLDER */
+
+.glass::placeholder{
+    color:#8EE9FF;
+
+    opacity:0.7;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+/* FOCUS */
+
+.glass:focus {
+  border: 1px solid #00d9ff;
+
+  box-shadow:
+    0 0 15px rgba(0, 217, 255, 0.45),
+    inset 0 0 10px rgba(255, 255, 255, 0.08);
+
+  transform: scale(1.03);
+
+  background: rgba(0, 217, 255, 0.08);
+}
+
+.glass-btn {
+  width: 200px;
+  height: 84px;
+
+  background: url("../img/Rectangle.png");
+
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-btn1 {
+  width: 206px;
+  height: 84px;
+
+  background: url("../img/Rectangle1.png");
+
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass-btn1:hover {
+  transform: translateY(-4px);
+}
+
+/* HOVER */
+.glass-btn:hover {
+  transform: translateY(-4px);
+}
+
+/* TEXTO BOTONES */
+.glass-btn span {
+  font-size: 30px;
+
+  letter-spacing: 1px;
+
+  z-index: 2;
+}
+
+span {
+  font-size: 21px;
+
+  letter-spacing: 1px;
+
+  z-index: 2;
+}
+
+.glass-btn,
+.glass-btn1{
+  position:relative;
+
+  width:200px;
+  height:84px;
+
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  transition:0.3s ease;
+}
+
+.glass-btn{
+  background-image:url("../img/Rectangle.png");
+}
+
+.glass-btn1{
+  background-image:url("../img/Rectangle1.png");
+}
+
+.active-btn::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  border-radius:20px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(0,217,255,0.35),
+      transparent 70%
+    );
+
+  filter:blur(12px);
+
+  z-index:-1;
+
+  animation:
+    activePulse 2s ease-in-out infinite alternate;
+}
+
+.center {
+  font-size: 30px;
+}
+
+@keyframes activePulse{
+
+  from{
+    opacity:0.5;
+    transform:scale(0.95);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1.08);
+  }
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 430px) {
+  .phone-container {
+    width: 100vw;
+    height: 100vh;
+
+    border-radius: 0;
+  }
+}

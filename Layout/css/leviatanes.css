@@ -1,0 +1,279 @@
+/* ========================================= */
+/* TITULO */
+/* ========================================= */
+
+.title {
+  position: absolute;
+
+  top: 370px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+}
+
+.title h2 {
+  color: #ff9d32;
+
+  font-size: 36px;
+  font-weight: 700;
+
+  text-shadow: 0 0 12px rgba(255, 157, 50, 0.4);
+}
+
+/* ========================================= */
+/* BOTON NEW */
+/* ========================================= */
+
+.new-btn {
+  position: absolute;
+
+  top: 440px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 5;
+}
+
+.new-btn a {
+  width: 240px;
+  height: 56px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  color: #d6ecff;
+
+  font-size: 34px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(90, 220, 255, 0.5);
+
+  background: rgba(30, 90, 120, 0.25);
+
+  backdrop-filter: blur(8px);
+
+  box-shadow:
+    0 0 20px rgba(0, 180, 255, 0.25),
+    inset 0 0 15px rgba(255,255,255,.05);
+
+  transition: .3s;
+}
+
+.new-btn a:hover {
+  transform: scale(1.05);
+
+  box-shadow:
+    0 0 25px rgba(0, 180, 255, 0.6),
+    inset 0 0 15px rgba(255,255,255,.08);
+}
+
+/* ========================================= */
+/* PANEL */
+/* ========================================= */
+
+.panel {
+  position: absolute;
+
+  top: 540px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 360px;
+
+  padding: 12px;
+
+  border-radius: 18px;
+
+  border: 2px solid rgba(0, 217, 255, 0.6);
+
+  background: rgba(0, 20, 35, 0.45);
+
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 0 25px rgba(0,180,255,.25),
+    inset 0 0 15px rgba(255,255,255,.03);
+
+  z-index: 5;
+}
+
+/* ========================================= */
+/* HEADER PANEL */
+/* ========================================= */
+
+.panel-header {
+  height: 38px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 15px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(50,120,255,.45),
+    rgba(0,180,255,.25)
+  );
+
+  color: #ff9d32;
+
+  margin-bottom: 12px;
+}
+
+.panel-header span {
+  font-size: 14px;
+}
+
+.panel-header i {
+  color: #9ee8ff;
+}
+
+/* ========================================= */
+/* NOTIFICACION */
+/* ========================================= */
+
+.notification {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+
+  margin-bottom: 10px;
+
+  border-radius: 12px;
+
+  border: 1px solid rgba(0,217,255,.4);
+
+  background: rgba(0,50,80,.28);
+
+  transition: .3s;
+}
+
+.notification:hover {
+  transform: translateY(-2px);
+
+  border-color: #42dfff;
+}
+
+/* ========================================= */
+/* IZQUIERDA */
+/* ========================================= */
+
+.notification-left {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.warning {
+  font-size: 28px;
+
+  color: #ff8c1a;
+}
+
+.notification-left h4 {
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.notification-left p {
+  color: rgba(255,255,255,.65);
+
+  font-size: 10px;
+}
+
+/* ========================================= */
+/* ACCIONES */
+/* ========================================= */
+
+.notification-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.notification-actions a {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(0,217,255,.4);
+
+  color: #d6ecff;
+
+  transition: .3s;
+}
+
+.notification-actions a:hover {
+  color: #fff;
+
+  border-color: #00d9ff;
+
+  box-shadow: 0 0 10px rgba(0,217,255,.5);
+}
+
+/* ========================================= */
+/* POSICION LOGO */
+/* ========================================= */
+
+.group {
+  position: absolute;
+
+  top: 82%;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 6;
+}
+
+/* ========================================= */
+/* AJUSTE MENU INFERIOR */
+/* ========================================= */
+
+.menu {
+  position: absolute;
+
+  bottom: 0;
+
+  left: 0;
+
+  width: 100%;
+  height: 95px;
+
+  display: flex;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: rgba(0,0,0,.75);
+
+  backdrop-filter: blur(10px);
+
+  z-index: 10;
+}

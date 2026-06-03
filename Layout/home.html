@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Home UI</title>
+
+    <link rel="stylesheet" href="css/home.css" />
+
+    <!-- ROBOTO SLAB -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="phone-container">
+      <div class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="top-circle">
+        <div class="top-radar">
+          <img src="img/leviatan.png" alt="" />
+        </div>
+    </div>
+    <div class="enter-text">
+      <p>SCROLL TO ENTER</p>
+    </div>
+
+      <!-- LOGIN -->
+      <div class="glass-text">
+        <span>
+          <span class="white">Sistema:</span> <br />
+          <span class="orange">Decendiendo</span>
+          <span class="white">a las profundidades</span>
+        </span>
+        <span>
+          <span class="white">Sistema:</span> <br />
+          <span class="orange">Sistema</span>
+          <span class="white">iniciado</span>
+        </span>
+        <span>
+          <span class="white">Sistema:</span> <br />
+          <span class="orange">Señales</span>
+          <span class="white">detectadas</span>
+        </span>
+        <span>
+          <span class="white">Sistema:</span> <br />
+          <span class="orange">La supervivencia</span>
+          <span class="white">comienza ahora</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="bubbles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+    <script>
+      let entered = false;
+
+      function enterSystem() {
+        if (entered) return;
+
+        entered = true;
+
+        document.querySelector(".phone-container").classList.add("zoom-in");
+
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 2200);
+      }
+
+      /* SCROLL */
+
+      window.addEventListener("wheel", (e) => {
+        if (e.deltaY > 0) {
+          enterSystem();
+        }
+      });
+
+      /* TOUCH MOBILE */
+
+      let touchStartY = 0;
+
+      window.addEventListener("touchstart", (e) => {
+        touchStartY = e.touches[0].clientY;
+      });
+
+      window.addEventListener("touchmove", (e) => {
+        let touchEndY = e.touches[0].clientY;
+
+        if (touchStartY - touchEndY > 40) {
+          enterSystem();
+        }
+      });
+
+      /* CLICK EN EL RADAR */
+
+      document
+        .querySelector(".top-circle")
+        .addEventListener("click", enterSystem);
+    </script>
+  </body>
+</html>

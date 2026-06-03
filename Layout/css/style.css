@@ -1,0 +1,312 @@
+/* ========================================= */
+/* RESET */
+/* ========================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================= */
+/* BODY */
+/* ========================================= */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #000;
+
+  overflow: hidden;
+}
+
+/* ========================================= */
+/* PHONE CONTAINER */
+/* ========================================= */
+
+.phone-container {
+  position: relative;
+
+  width: 421px;
+  height: 874px;
+
+  overflow: hidden;
+
+  font-family: "Roboto Slab", serif;
+
+  border-radius: 38px;
+
+  border: 4px solid rgba(255, 255, 255, 0.75);
+
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.9);
+
+  isolation: isolate;
+}
+
+/* ========================================= */
+/* FONDO ANIMADO */
+/* ========================================= */
+
+.phone-container::before {
+  content: "";
+
+  position: absolute;
+
+  inset: -20px;
+
+  background-image: url("../img/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  transform: scale(1.1);
+
+  z-index: -2;
+
+  animation: bgMove 18s ease-in-out infinite alternate;
+}
+
+/* ========================================= */
+/* OVERLAY OSCURO */
+/* ========================================= */
+
+.phone-container::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.55)
+  );
+
+  z-index: -1;
+}
+
+/* ========================================= */
+/* MENU */
+/* ========================================= */
+
+.menu {
+  position: absolute;
+
+  bottom: 100px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+/* ========================================= */
+/* BOTON */
+/* ========================================= */
+
+.glass-btn {
+  width: 264px;
+  height: 57px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+
+  border-radius: 18px;
+
+  border: 1px solid rgb(0, 180, 216);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 0 12px rgba(0, 0, 0, 0.35),
+    inset 0 0 10px rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s ease;
+
+  animation: breathing 4s ease-in-out infinite;
+}
+
+.glass-btn:hover {
+  transform: scale(1.03);
+
+  background: rgba(43, 95, 163, 0.28);
+
+  box-shadow:
+    0 0 20px rgba(43, 95, 163, 0.6),
+    inset 0 0 12px rgba(255, 255, 255, 0.1);
+}
+
+/* ========================================= */
+/* TEXTO */
+/* ========================================= */
+
+.glass-btn span {
+  font-size: 31px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+.orange {
+  color: #ff7f11;
+}
+
+.white {
+  color: #eeeeee;
+}
+
+/* ========================================= */
+/* BURBUJAS */
+/* ========================================= */
+
+.bubbles {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+.bubbles span {
+  position: absolute;
+
+  bottom: -100px;
+
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+
+  background: rgba(180, 240, 255, 0.25);
+
+  backdrop-filter: blur(4px);
+
+  animation: bubbles 10s linear infinite;
+}
+
+.bubbles span:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+}
+
+.bubbles span:nth-child(2) {
+  left: 30%;
+
+  width: 8px;
+  height: 8px;
+
+  animation-duration: 11s;
+}
+
+.bubbles span:nth-child(3) {
+  left: 50%;
+
+  animation-duration: 7s;
+}
+
+.bubbles span:nth-child(4) {
+  left: 70%;
+
+  width: 18px;
+  height: 18px;
+
+  animation-duration: 13s;
+}
+
+.bubbles span:nth-child(5) {
+  left: 85%;
+
+  animation-duration: 9s;
+}
+
+.bubbles span:nth-child(6) {
+  left: 60%;
+
+  width: 10px;
+  height: 10px;
+
+  animation-duration: 12s;
+}
+
+/* ========================================= */
+/* ANIMACIONES */
+/* ========================================= */
+
+@keyframes breathing {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes textGlow {
+  from {
+    opacity: 0.75;
+  }
+
+  to {
+    opacity: 1;
+
+    text-shadow: 0 0 8px rgba(120, 220, 255, 0.7);
+  }
+}
+
+@keyframes bgMove {
+  0% {
+    transform: scale(1.1) translateY(0px);
+  }
+
+  100% {
+    transform: scale(1.18) translateY(-20px);
+  }
+}
+
+@keyframes bubbles {
+  0% {
+    transform: translateY(0px) translateX(0px);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(-1100px) translateX(40px);
+
+    opacity: 0;
+  }
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width: 430px) {
+  .phone-container {
+    width: 100vw;
+    height: 100vh;
+
+    border-radius: 0;
+  }
+}
