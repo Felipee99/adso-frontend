@@ -258,7 +258,6 @@ body {
   z-index: 5;
 }
 
-
 .menu-info {
   position: absolute;
 
@@ -357,8 +356,6 @@ body {
   background: rgba(0, 217, 255, 0.08);
 }
 
-
-
 .glass0 {
   width: 157px;
   height: 45px;
@@ -424,7 +421,6 @@ body {
   background: rgba(0, 217, 255, 0.08);
 }
 
-
 /* ========================================= */
 /* GROUP */
 /* ========================================= */
@@ -445,7 +441,7 @@ body {
 .glass-btn4,
 .glass-btn5 {
   width: 280px;
-  height: 280px;
+  height: 80px;
 
   background-size: contain;
   background-repeat: no-repeat;
@@ -633,7 +629,7 @@ body {
 
   font-size: 22px;
 
-  text-shadow: 0 0 12px rgba(255, 143, 31, .5);
+  text-shadow: 0 0 12px rgba(255, 143, 31, 0.5);
 }
 
 /* ========================================= */
@@ -667,17 +663,17 @@ body {
 
   border-radius: 30px;
 
-  border: 1px solid rgba(120,220,255,.4);
+  border: 1px solid rgba(120, 220, 255, 0.4);
 
-  background: rgba(0,100,180,.18);
+  background: rgba(0, 100, 180, 0.18);
 
   backdrop-filter: blur(8px);
 
   box-shadow:
-    0 0 15px rgba(0,180,255,.2),
-    inset 0 0 10px rgba(255,255,255,.04);
+    0 0 15px rgba(0, 180, 255, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.04);
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .new-btn a:hover {
@@ -691,27 +687,27 @@ body {
 .location-panel {
   position: absolute;
 
-  top: 500px;
+  top: 480px; 
   left: 50%;
 
   transform: translateX(-50%);
 
-  width: 320px;
-  height: 210px;
+  width: 340px;
+  height: 260px;
 
   padding: 14px;
 
   border-radius: 20px;
 
-  border: 1px solid rgba(0,217,255,.55);
+  border: 1px solid rgba(0, 217, 255, 0.55);
 
-  background: rgba(0,30,60,.30);
+  background: rgba(0, 30, 60, 0.3);
 
   backdrop-filter: blur(12px);
 
   box-shadow:
-    0 0 20px rgba(0,180,255,.25),
-    inset 0 0 10px rgba(255,255,255,.03);
+    0 0 20px rgba(0, 180, 255, 0.25),
+    inset 0 0 10px rgba(255, 255, 255, 0.03);
 
   z-index: 5;
 }
@@ -741,20 +737,19 @@ body {
 
   border-radius: 50%;
 
-  border: 1px solid rgba(0,217,255,.45);
+  border: 1px solid rgba(0, 217, 255, 0.45);
 
   color: #ff8f1f;
 
-  background: rgba(0,50,90,.35);
+  background: rgba(0, 50, 90, 0.35);
 
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .location-actions a:hover {
   transform: scale(1.1);
 
-  box-shadow:
-    0 0 10px rgba(0,217,255,.6);
+  box-shadow: 0 0 10px rgba(0, 217, 255, 0.6);
 }
 
 /* ========================================= */
@@ -762,8 +757,8 @@ body {
 /* ========================================= */
 
 .map-container {
-  width: 220px;
-  height: 160px;
+  width: 250px;
+  height: 180px;
 
   margin: auto;
 
@@ -771,10 +766,9 @@ body {
 
   overflow: hidden;
 
-  border: 1px solid rgba(0,217,255,.55);
+  border: 1px solid rgba(0, 217, 255, 0.55);
 
-  box-shadow:
-    0 0 15px rgba(0,180,255,.25);
+  box-shadow: 0 0 15px rgba(0, 180, 255, 0.25);
 }
 
 .map-container img {
@@ -796,4 +790,3 @@ body {
     border-radius: 0;
   }
 }
-
