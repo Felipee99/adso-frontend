@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Subnautica UI</title>
+    <title>Eliminar Leviatán</title>
 
-    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/leviatanes.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
       rel="stylesheet"
@@ -15,42 +19,28 @@
   </head>
 
   <body>
-    <div class="phone-container">
-      <!-- Radar -->
+    <div class="phone-container dark">
+      <a href="leviatanes.html" class="back-btn">
+        <span>&larr;</span>
+      </a>
+
       <div class="top-circle">
         <div class="top-radar">
-          <img src="img/user.png" alt="" />
+          <img src="img/leviatan2.png" alt="Leviatán" />
         </div>
       </div>
 
-      <div class="menu-info">
-        <input type="email" class="glass" placeholder="Email" />
-        <input type="text" class="glass" placeholder="Documento" />
-        <input type="text" class="glass" placeholder="Nombre" />
-        <input type="text" class="glass" placeholder="Apellido" />
-
-        <div class="actions">
-          <a href="updateProfile.html" class="glass0">
-            <span>
-              <span class="orange">Up</span><span class="white">date</span>
-            </span>
-          </a>
-
-          <a href="changePassword.html" class="glass0">
-            <span>
-              <span class="orange">Change</span
-              ><span class="white"> Password</span>
-            </span>
-          </a>
-        </div>
+      <div class="confirm-panel">
+        <h3>Eliminar Registro</h3>
+        <p>Seguro que quiere eliminar el registro? No se podrá recuperar.</p>
+        <a href="leviatanes.html" class="danger-btn">Eliminar</a>
       </div>
 
-      <!-- Logo inferior -->
       <div class="group">
         <img src="img/Group.png" alt="Logo" />
       </div>
 
-      <<div class="menu">
+      <div class="menu">
         <a href="dashboard.html" class="glass-btn2 active-btn">
           <span class="center">
             <span class="orange">Dash</span><span class="white">board</span>
@@ -76,7 +66,6 @@
         </a>
       </div>
 
-      <!-- Burbujas -->
       <div class="bubbles">
         <span></span>
         <span></span>

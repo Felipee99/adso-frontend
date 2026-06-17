@@ -4,10 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Subnautica UI</title>
+    <title>Ver Leviatanes</title>
 
-    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="css/leviatanes.css" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap"
       rel="stylesheet"
@@ -16,41 +20,57 @@
 
   <body>
     <div class="phone-container">
-      <!-- Radar -->
+      <a href="leviatanes.html" class="back-btn">
+        <span>&larr;</span>
+      </a>
+
       <div class="top-circle">
         <div class="top-radar">
-          <img src="img/user.png" alt="" />
+          <img src="img/leviatan2.png" alt="Leviatán" />
         </div>
       </div>
 
-      <div class="menu-info">
-        <input type="email" class="glass" placeholder="Email" />
-        <input type="text" class="glass" placeholder="Documento" />
-        <input type="text" class="glass" placeholder="Nombre" />
-        <input type="text" class="glass" placeholder="Apellido" />
+      <div class="image-panel">
+        <img src="img/bg_bg.png" alt="Escena de Leviatán" />
+      </div>
 
-        <div class="actions">
-          <a href="updateProfile.html" class="glass0">
-            <span>
-              <span class="orange">Up</span><span class="white">date</span>
-            </span>
-          </a>
+      <div class="info-list">
+        <div class="info-card">
+          <div class="icon">
+            <i class="fa-solid fa-triangle-exclamation warning"></i>
+          </div>
+          <div class="info-text">
+            <span>Sistema:</span>
+            <span>Clase: Leviatan</span>
+          </div>
+        </div>
 
-          <a href="changePassword.html" class="glass0">
-            <span>
-              <span class="orange">Change</span
-              ><span class="white"> Password</span>
-            </span>
-          </a>
+        <div class="info-card">
+          <div class="icon">
+            <i class="fa-solid fa-triangle-exclamation warning"></i>
+          </div>
+          <div class="info-text">
+            <span>Sistema:</span>
+            <span>Mortalidad: 0</span>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="icon">
+            <i class="fa-solid fa-triangle-exclamation warning"></i>
+          </div>
+          <div class="info-text">
+            <span>Sistema:</span>
+            <span>Nombre: Gargantua.</span>
+          </div>
         </div>
       </div>
 
-      <!-- Logo inferior -->
       <div class="group">
         <img src="img/Group.png" alt="Logo" />
       </div>
 
-      <<div class="menu">
+      <div class="menu">
         <a href="dashboard.html" class="glass-btn2 active-btn">
           <span class="center">
             <span class="orange">Dash</span><span class="white">board</span>
@@ -76,7 +96,6 @@
         </a>
       </div>
 
-      <!-- Burbujas -->
       <div class="bubbles">
         <span></span>
         <span></span>
