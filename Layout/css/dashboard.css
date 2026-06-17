@@ -318,6 +318,11 @@ body {
   filter: drop-shadow(0 0 10px rgba(0, 200, 255, 0.8));
 }
 
+.active-btn {
+  transform: translateY(-5px) scale(1.08);
+  filter: drop-shadow(0 0 14px rgba(0, 200, 255, 0.95));
+}
+
 /* ========================================= */
 /* BURBUJAS */
 /* ========================================= */

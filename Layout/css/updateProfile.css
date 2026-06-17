@@ -258,6 +258,45 @@ body {
   z-index: 5;
 }
 
+.back-btn {
+  position: absolute;
+  top: 30px;
+  left: 24px;
+
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+  color: #8ee9ff;
+
+  border-radius: 50%;
+  border: 1px solid rgba(0, 217, 255, 0.7);
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 0 12px rgba(0, 0, 0, 0.35),
+    inset 0 0 10px rgba(255, 255, 255, 0.08);
+
+  transition: 0.3s ease;
+  z-index: 4;
+}
+
+.back-btn:hover {
+  transform: scale(1.05);
+  border-color: #5ce1ff;
+}
+
+.back-btn span {
+  font-size: 22px;
+  font-weight: 700;
+}
+
 
 .menu-info {
   position: absolute;
